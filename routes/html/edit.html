@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="stylesheets/edit.css">
+  <link rel="stylesheet" href="stylesheets/basic.css">
+  <script src="scripts/basicJs.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+</head>
+
+<body onload="loginCheck(${req.isAuthenticated()})">
+
+  <header>
+    <img src="images/list.png" id="listBtn" onclick="openBox()">
+    <a href="/" id="gotoMain"><h1 id="title">Quiz</h1></a>
+    <a href="/signin" class="login" id="signIn" style="margin-right: 10%">로그인</a>
+  </header>
+
+  <article>
+    <section id="box">
+      <span id="editTitle">Edit</span><br>
+      <div style="margin-top: 50px">
+        <form action="/edirProfile" method="POST" id="edit">
+          <table>
+                <tr>
+                    <td>
+                        <label for="name">닉네임</label>
+                    </td>
+                    <td><input type="text" id="name" placeholder="닉네임" autofocus size="30" required height="300px" name="name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">비밀번호&nbsp;&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" placeholder="비밀번호" size="30" required name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" id="submit" onmouseover="changeColor()" onmouseout="backColor()">정보 변경</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+      </div>
+    </section>
+
+  </article>
+  <nav>
+    <section id="listBox">
+      <img src="images/list.png" alt="" id="listBtn2" onclick="closeBox()">
+      <h1 id="titleInBox">Quiz</h1>
+      <span id="userName">Sunrin</span>
+      <hr>
+      <h2 class="listIndex">Quiz</h2>
+      <p class="quizIndex">상식</p>
+      <p class="quizIndex">IT</p>
+      <p class="quizIndex">수도</p>
+      <p class="quizIndex">넌센스</p>
+      <p class="quizIndex">과학</p>
+      <p class="quizIndex">영어</p>
+      <p class="quizIndex">연예</p>
+      <p class="quizIndex">사회</p>
+      <p class="quizIndex">수학</p>
+    </section>
+  </nav>
+  <footer>
+    <span id="footer">제작 : 10509 김수빈<br>제작 기간 : 2018/11/15 ~ 2018/12/03<br><br><br>Copyright 2018, Comsiil. All right reserved.</span>
+  </footer>
+
+</body>
+
+<script>
+  function openBox() {
+    document.getElementById("listBox").style.width = "300px"
+    document.getElementById("listBtn2").style.width = "40px"
+  }
+
+  function closeBox() {
+    document.getElementById("listBox").style.width = "0px"
+    document.getElementById("listBtn2").style.width = "0px"
+  }
+
+  function changeColor() {
+    var a = document.getElementById("submit");
+    a.style.color = "#00a44a";
+    a.style.backgroundColor = "white";
+  }
+
+  function backColor() {
+    var a = document.getElementById("submit");
+    a.style.color = "white";
+    a.style.backgroundColor = "#00a44a";
+  }
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+{
+  "1": {
+    "sentence": "23번째 알파벳은?",
+    "score": 3,
+    "choices": [
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y"
+    ],
+    "answer": 3
+  },
+  "2": {
+    "sentence": "\"English\" 단어에서, 모음의 개수는?",
+    "score": 2,
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 4
+  },
+  "3": {
+    "sentence": "영어를 국어로 사용하지 않는 나라는?",
+    "score": 4,
+    "choices": [
+      "미국",
+      "영국",
+      "남아프리카공화국",
+      "인도",
+      "브라질"
+    ],
+    "answer": 5
+  },
+  "4": {
+    "sentence": "명사가 아닌 것은?",
+    "score": 2,
+    "choices": [
+      "laptop",
+      "charger",
+      "heavy",
+      "price",
+      "monitor"
+    ],
+    "answer": 3
+  },
+  "5": {
+    "sentence": "\"행복\"이라는 뜻을 가진 단어는?",
+    "score": 4,
+    "choices": [
+      "happiness",
+      "happy",
+      "enjoy",
+      "good",
+      "sungwoo"
+    ],
+    "answer": 1
+  }
+}

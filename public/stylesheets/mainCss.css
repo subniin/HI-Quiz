@@ -1,0 +1,119 @@
+#secondTitle {
+    background-color: #00a44a;
+    margin: 0;
+    height: 95vh;
+}
+
+#hello {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 40pt;
+    line-height: 100vh;
+    text-align: center
+}
+
+#box {
+    border: 3px solid #00a44a;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+#profileName {
+    font-size: x-large;
+    font-weight: bold;
+    color: #00a44a;
+}
+
+.profileComment {
+    color: #00a44a;
+    font-weight: bold;
+}
+
+h2 {
+    color: #00a44a;
+}
+
+.category {
+    width: 32%;
+    height: 90px;
+    background-color: #00a44a;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 0;
+}
+
+.category:focus {
+    outline: none;
+}
+
+.divide {
+    width: 2%;
+    height: 80px;
+}
+
+.category, .divide {
+    float: left;
+}
+
+#ready {
+    width: 100%;
+    height: 90px;
+    color: #cccccc;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 3px dotted #cccccc;
+}
+
+/*quizSolving*/
+
+#num {
+    color: #00a44a;
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+#sentence {
+    font-size: 20pt;
+}
+
+#score {
+    float: right;
+}
+
+#currentScore {
+    color: #00a44a;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top: 120px;
+}
+
+table {
+    width: 100%;
+    height: 100px;
+    font-size: 20pt;
+    cursor: default;
+}
+
+tr {
+    line-height: 50px;
+}
+
+#timerBar {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #00a44a;
+    /*border: 2px solid #00a44a;*/
+    border-radius: 100px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    transition: width 1s;
+    transition-timing-function: linear;
+}

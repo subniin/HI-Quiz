@@ -1,0 +1,118 @@
+* {
+    font-family: 'NanumSquare', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+article {
+    margin: 100px 10%;
+}
+
+header {
+    background-color: #00a44a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+#title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30pt;
+    display: inline;
+    margin-left: 7%;
+    text-decoration: none;
+}
+
+.login {
+    float: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#signUpBtn {
+    margin-left: 10px;
+    margin-right: 10%;
+}
+
+footer {
+    color: grey;
+    font-size: 10pt;
+    margin-bottom: 0;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+#titleInBox{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30pt;
+    margin-top:20px;
+    margin-left: 175px;
+}
+#listBtn{
+    padding-left: 20px;
+    margin-top:5px;
+    float:left;
+    height: 30px;
+    width: 40px;
+}
+#listBtn2{
+    float:left;
+    padding:20px;
+    margin-top:5px;
+    height: 30px;
+    width: 0px;
+    transition: width 0.3s;
+}
+#listBox{
+    width:0px;
+    height:100%;
+    position: fixed;
+    top:0;
+    background-color:#408149;
+    transition: width 0.5s;
+    max-width: 300px;
+    overflow: hidden;
+    z-index:100;
+}
+
+#userName{
+    margin-left: 10px;
+    font-size: 30px;
+    color:#ffffff;
+    width:100%;
+    word-break:keep-all;
+}
+.quizIndex{
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left: 50px;
+  font-size: 15pt;
+  color:#ffffff;
+  width:100%;
+  word-break:keep-all;
+  transition: background-color 0.5s,color 0.5s;
+}
+.quizIndex:hover{
+  transition: rotate(180deg);
+  background-color: #ffffff;
+  color:#408149;
+}
+.listIndex{
+  margin-left: 10px;
+  font-size: 20pt;
+  color:#ffffff;
+  width:100%;
+  word-break:keep-all;
+}
+a{
+  text-decoration: none;
+}

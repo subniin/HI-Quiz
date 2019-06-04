@@ -1,0 +1,56 @@
+* {
+    font-family: 'NanumSquare', '나눔스퀘어', 'sans-serif';
+}
+
+body {
+    margin: 0;
+}
+
+article {
+    margin: 100px 10%;
+}
+
+header {
+    background-color: #00a44a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+#title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30pt;
+    display: inline;
+    margin-left: 10%;
+    text-decoration: none;
+}
+
+.login {
+    float: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#box {
+    border: 3px solid #00a44a;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+footer {
+    color: grey;
+    font-size: 10pt;
+    margin-bottom: 0;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*height: 100px;*/
+}

@@ -1,0 +1,49 @@
+#editTitle{
+  font-size: 50px;
+  font-weight: bold;
+  color: #00a44a;
+}
+#box {
+    border: 3px solid #00a44a;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    font-size: 20px;
+}
+input{
+  vertical-align: middle;
+  line-height: 35px;
+  padding: 5px;
+  font-size: 10pt;
+}
+#password{
+  color:#000000;
+}
+input:hover{
+  outline: none;
+}
+
+#submit{
+  background-color: #00a44a;
+  border: 3px solid #00a44a;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.editIndex{
+  font-size: 25px;
+}
+table {
+    font-size: 15pt;
+}
+
+td {
+    height: 50px;
+}
+article{
+  margin:100px 10%;
+  margin-top: 200px;
+
+}

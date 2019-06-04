@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../stylesheets/mainCss.css">
+    <link rel="stylesheet" href="../stylesheets/basic.css">
+    <script src="../scripts/basicJs.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .scoreExplain {
+            float: right;
+        }
+    </style>
+</head>
+
+<body onload="loginCheck()">
+<header>
+    <img src="../images/list.png" id="listBtn" onclick="openBox()">
+    <a href="../" style="text-decoration: none;"><h1 id="title">Quiz</h1></a>
+    <a href="../signup" class="login" id="signUpBtn">회원가입</a>
+    <a href="../signin" class="login" id="signInBtn">로그인</a>
+</header>
+
+<article id="currentScore" style="margin-bottom: 0;">
+    <span id="currentScoreText">현재 점수 : </span><span id="currentScoreScore">0점</span>
+</article>
+
+<article style="margin-top: 0">
+  <section id="box" style="margin-bottom: 10px">
+      <span style="color: #00a44a; font-weight: bold; font-size: 25pt;">#</span>
+      <h1 id="num" style="display: inline;">1</h1>
+      <span class="scoreExplain">점]</span>
+      <span id="score">2</span>
+      <span class="scoreExplain">[</span>
+      <p id="sentence">2+2=?</p>
+  </section>
+    <br>
+    <table>
+        <tr class="example">
+            <td id="answer0">
+                <span>①</span>
+                <span>  0</span>
+            </td>
+        </tr>
+        <tr class="example">
+            <td id="answer1">
+                <span>②</span>
+                <span>  1</span>
+            </td>
+        </tr>
+        <tr class="example">
+            <td id="answer2">
+                <span>③</span>
+                <span>  2</span>
+            </td>
+        </tr>
+        <tr class="example">
+            <td id="answer3">
+                <span>④</span>
+                <span>  3</span>
+            </td>
+        </tr>
+        <tr class="example">
+            <td id="answer4">
+                <span>⑤</span>
+                <span>  4</span>
+            </td>
+        </tr>
+    </table>
+    <p style="font-size: 15pt; color: #00a44a; font-weight: bold;">제한 시간</p>
+    <div id="timerBar">10</div>
+</article>
+
+<footer style="position: fixed; bottom: 0; width: 100%;">
+    <span id="footer">제작 : 10509 김수빈<br>제작 기간 : 2018/11/15 ~ 2018/12/03<br>Copyright 2018, Comsiil. All right reserved.</span>
+</footer>
+
+<nav>
+    <section id="listBox">
+        <img src="../images/list.png" alt="" id="listBtn2" onclick="closeBox()">
+        <h1 id="titleInBox">Quiz</h1>
+        <span id="userName">Sunrin</span>
+        <hr>
+        <h2 class="listIndex">Quiz</h2>
+        <p class="quizIndex">상식</p>
+        <p class="quizIndex">IT</p>
+        <p class="quizIndex">수도</p>
+        <p class="quizIndex">넌센스</p>
+        <p class="quizIndex">과학</p>
+        <p class="quizIndex">영어</p>
+        <p class="quizIndex">연예</p>
+        <p class="quizIndex">선린</p>
+        <p class="quizIndex">사회</p>
+        <p class="quizIndex">브랜드</p>
+    </section>
+</nav>
+
+</body>
+
+<script>
+var count = 0;
+var currentScore = 0;
+
+var timerBar = document.getElementById("timerBar");
+var timerBarPercent = 90;
+var time = 10;
+var timerID = setInterval("timer()", 1000);
+
+var quiz = null;
+
+function setQuiz() {
+    quiz = getQuizInfo("az", count++);
+    document.getElementById("num").innerHTML = count + 1;
+    document.getElementById("score").innerHTML = quiz['score'];
+    document.getElementById("sentence").innerHTML = quiz['sentence'];
+    document.getElementById("choice1").innerHTML = quiz['choices'][0];
+    document.getElementById("choice2").innerHTML = quiz['choices'][1];
+    document.getElementById("choice3").innerHTML = quiz['choices'][2];
+    document.getElementById("choice4").innerHTML = quiz['choices'][3];
+    document.getElementById("choice5").innerHTML = quiz['choices'][4];
+    document.getElementById("currentScoreScore").innerHTML = currentScore;
+}
+
+function checkAnswer(choice) {
+    if(choice == quiz['answer']) {
+        currentScore += quiz['score'];
+        timerBarPercent = -20;
+        timer();
+    }
+    else {
+        alert('틀렸습니다!');
+        timerBarPercent = -20;
+        timer();
+    }
+}
+
+function timer() {
+    document.getElementById("timerBar").innerHTML = --time;
+    timerBar.style.width = timerBarPercent + "%";
+    timerBarPercent -= 10;
+    if(timerBarPercent == -20) {
+        clearInterval(timerID);
+
+        quiz = getQuizInfo("az", count++);
+        document.getElementById("num").innerHTML = count + 1;
+        document.getElementById("score").innerHTML = quiz['score'];
+        document.getElementById("sentence").innerHTML = quiz['sentence'];
+        document.getElementById("currentScoreScore").innerHTML = currentScore;
+        timerBar.style.width = "100%";
+        timerBar.innerHTML = "10";
+        timerBarPercent = 90;
+        time = 10;
+        timerID = setInterval("timer()", 1000);
+
+    }
+}
+
+function getQuizInfo(quizGenre, quizNumber){
+    $.ajax({
+        url:"http://localhost:3000/"+quizGenre+"/"+quizNumber,
+        type:'POST',
+        dataType:'json',
+        success:function(data){
+            console.log(data);
+            return data;
+        },
+        async:true
+    });
+}
+
+</script>
+
+</html>

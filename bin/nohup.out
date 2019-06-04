@@ -1,0 +1,25 @@
+(node:19479) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+Port 3000 is already in use
+(node:19491) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+mongo DB connected...
+[0mGET / [32m200 [0m8.737 ms - 4782[0m
+[0mGET /social/1 [36m302 [0m5.119 ms - 58[0m
+undefined
+undefined
+[0mGET /signin [36m304 [0m2.343 ms - -[0m
+[0mPOST /login [36m302 [0m111.553 ms - 46[0m
+[0mGET / [32m200 [0m3.958 ms - 4746[0m
+[0mGET /favicon.ico [33m404 [0m5.697 ms - 1387[0m
+[0mGET /social/1 [32m200 [0m2.293 ms - 7679[0m
+[0mPOST /social/1 [32m200 [0m2.754 ms - 251[0m
+[0mGET /favicon.ico [33m404 [0m2.626 ms - 1387[0m
+[0mGET / [36m304 [0m1.939 ms - -[0m
+(node:19533) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+mongo DB connected...
+(node:19657) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+mongo DB connected...
+[0mGET / [32m200 [0m8.963 ms - 4782[0m
+[0mGET / [32m200 [0m1.021 ms - 4782[0m
+[0mGET /favicon.ico [33m404 [0m4.750 ms - 1387[0m
+[0mGET / [36m304 [0m0.625 ms - -[0m
+[0mGET / [36m304 [0m0.597 ms - -[0m

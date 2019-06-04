@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+    <link rel="stylesheet" href="stylesheets/basic.css">
+
+</head>
+
+<body>
+
+    <header>
+       <img src="../list.png" id="listBtn" onclick="openBox()">
+        <a href="main.html" id="gotoMain"><h1 id="title">Quiz</h1></a>
+        <a href="" class="login" id="signUp">회원가입</a>
+        <a href="" class="login" id="signIn">로그인</a>
+    </header>
+
+    <article>
+        <section id="box">
+          <span id="profileTitle">Profile</span><br>
+            <div style="margin-top: 50px">
+                <span id="profileName">Sunrin</span>
+                <span>님</span><br><br>
+                <span>ID : </span>
+                <span class="profileComment" id="profileID">qwer</span><br><br>
+                <span>푼 문제 수 : </span>
+                <span class="profileComment" id="profileSolved">000</span>
+                <span>문제 ( 상위 </span>
+                <span class="profileComment" id="profileRank">00%</span>
+                <span>)</span><br><br>
+                <span>가입한지 </span>
+                <span class="profileComment" id="profileDay">000</span>
+                <span>일</span>
+            </div>
+            <br>
+            <form action="edit.html">
+              <input type="submit" id="gotoEdit" value="정보 변경" onmouseover="changeColor()" onmouseout="backColor()">
+            </form>
+        </section>
+    </article>
+    <nav>
+      <section id="listBox">
+        <img src="../list.png" alt="" id="listBtn2" onclick="closeBox()">
+        <h1 id="titleInBox">Quiz</h1>
+        <span id="userName">Sunrin</span>
+        <hr>
+        <h2 class="listIndex">Quiz</h2>
+        <p class="quizIndex">상식</p>
+        <p class="quizIndex">IT</p>
+        <p class="quizIndex">수도</p>
+        <p class="quizIndex">넌센스</p>
+        <p class="quizIndex">과학</p>
+        <p class="quizIndex">영어</p>
+        <p class="quizIndex">연예</p>
+        <p class="quizIndex">선린</p>
+        <p class="quizIndex">사회</p>
+        <p class="quizIndex">브랜드</p>
+      </section>
+    </nav>
+
+    <footer>
+        <span id="footer">제작 : 10509 김수빈<br>제작 기간 : 2018/11/15 ~ 2018/12/??<br><br><br>Copyright 2018, Comsiil. All right reserved.</span>
+    </footer>
+
+
+</body>
+
+<script>
+        function openBox(){
+          document.getElementById("listBox").style.width="300px"
+          document.getElementById("listBtn2").style.width="40px"
+        }
+        function closeBox(){
+          document.getElementById("listBox").style.width="0px"
+          document.getElementById("listBtn2").style.width="0px"
+        }
+        function changeColor() {
+            var a= document.getElementById("gotoEdit");
+            a.style.color = "#00a44a";
+            a.style.backgroundColor = "white";
+        }
+
+        function backColor() {
+            var a= document.getElementById("gotoEdit");
+            a.style.color = "white";
+            a.style.backgroundColor = "#00a44a";
+        }
+    </script>
+
+</html>

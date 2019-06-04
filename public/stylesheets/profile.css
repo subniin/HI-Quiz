@@ -1,0 +1,38 @@
+
+#profileTitle{
+  font-size: 50px;
+  font-weight: bold;
+  color: #00a44a;
+}
+#box {
+    border: 3px solid #00a44a;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+#profileName {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00a44a;
+}
+
+.profileComment {
+    color: #00a44a;
+    font-weight: bold;
+}
+#gotoEdit{
+  background-color: #00a44a;
+  border: 3px solid #00a44a;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+article{
+  margin:100px 10%;
+  margin-top: 150px;
+}
