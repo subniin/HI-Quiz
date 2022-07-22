@@ -13,7 +13,7 @@
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "express-session": "^1.15.6",
-    "file-type": "^10.5.0",
+    "file-type": "^16.5.4",
     "formidable": "^1.2.1",
     "http-errors": "^1.6.3",
     "moment": "^2.22.2",
